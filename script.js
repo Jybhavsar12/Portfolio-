@@ -3,13 +3,11 @@ const GITHUB_USERNAME = 'Jybhavsar12';
 
 async function fetchGitHubProjects() {
     try {
-        // Fetch only starred repos
         const starredResponse = await fetch(`https://api.github.com/users/${GITHUB_USERNAME}/starred?per_page=10`);
         const starred = await starredResponse.json();
         
         const projectsContainer = document.getElementById('projects-container');
         
-        // Add starred repositories with details
         starred.forEach(repo => {
             const projectCard = createProjectCard(repo);
             projectsContainer.appendChild(projectCard);
@@ -24,7 +22,6 @@ function createProjectCard(repo) {
     const card = document.createElement('div');
     card.className = 'project-card';
     
-    // Format dates
     const updatedDate = new Date(repo.updated_at).toLocaleDateString();
     const createdDate = new Date(repo.created_at).toLocaleDateString();
     
@@ -64,7 +61,7 @@ function createProjectCard(repo) {
     return card;
 }
 
-// Smooth scrolling for navigation links
+// Smooth scrolling
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -81,7 +78,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Load projects when page loads
 document.addEventListener('DOMContentLoaded', fetchGitHubProjects);
 
-// EmailJS Configuration - Direct setup
+// EmailJS Configuration
 const EMAILJS_CONFIG = {
     PUBLIC_KEY: 'JFiFeoR_C3j4rgPx5',
     SERVICE_ID: 'service_fket6cq',
@@ -91,13 +88,11 @@ const EMAILJS_CONFIG = {
 // Initialize EmailJS
 emailjs.init(EMAILJS_CONFIG.PUBLIC_KEY);
 
-// Custom notification function
+// Notification function
 function showNotification(title, message, type = 'success') {
-    // Remove existing notifications
     const existingNotifications = document.querySelectorAll('.notification');
     existingNotifications.forEach(notification => notification.remove());
     
-    // Create notification element
     const notification = document.createElement('div');
     notification.className = `notification ${type}`;
     
@@ -118,10 +113,8 @@ function showNotification(title, message, type = 'success') {
     
     document.body.appendChild(notification);
     
-    // Show notification with animation
     setTimeout(() => notification.classList.add('show'), 100);
     
-    // Auto remove after 5 seconds
     setTimeout(() => {
         if (notification.parentElement) {
             notification.classList.remove('show');
@@ -130,7 +123,7 @@ function showNotification(title, message, type = 'success') {
     }, 5000);
 }
 
-// Enhanced form submission
+// Form submission
 document.getElementById('contact-form').addEventListener('submit', function(e) {
     e.preventDefault();
     
@@ -146,7 +139,6 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
         message: document.getElementById('message').value,
     };
     
-    // Send email using EmailJS
     emailjs.send(EMAILJS_CONFIG.SERVICE_ID, EMAILJS_CONFIG.TEMPLATE_ID, formData)
     .then(function(response) {
         console.log('SUCCESS!', response.status, response.text);

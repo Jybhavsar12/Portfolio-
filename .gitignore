@@ -1,11 +1,3 @@
-# Environment variables
-.env
-.env.local
-.env.production
-
-# Local config files
-config.local.js
-
 # Dependencies
 node_modules/
 
