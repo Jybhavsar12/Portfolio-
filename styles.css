@@ -786,3 +786,201 @@ body {
     --card-bg: rgba(0, 0, 0, 0.05);
     --border-color: rgba(0, 0, 0, 0.1);
 }
+
+/* Enhanced light mode variables with badass colors */
+[data-theme="light"] {
+    --bg-primary: #f8fafc;
+    --bg-secondary: #ffffff;
+    --text-primary: #1a202c;
+    --text-secondary: #4a5568;
+    --accent-cyan: #0066ff;
+    --accent-magenta: #8b5cf6;
+    --card-bg: rgba(255, 255, 255, 0.8);
+    --border-color: rgba(0, 102, 255, 0.2);
+}
+
+/* Light mode gradient backgrounds */
+[data-theme="light"] .hero {
+    background: radial-gradient(circle at 50% 50%, rgba(0, 102, 255, 0.15) 0%, transparent 50%),
+                linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+[data-theme="light"] .projects {
+    background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+}
+
+[data-theme="light"] .about {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+[data-theme="light"] .contact {
+    background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+}
+
+/* Light mode navbar with glass effect */
+[data-theme="light"] .navbar {
+    background: rgba(255, 255, 255, 0.85);
+    border-bottom: 1px solid rgba(0, 102, 255, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 102, 255, 0.1);
+}
+
+/* Enhanced project cards for light mode */
+[data-theme="light"] .project-card {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(0, 102, 255, 0.15);
+    box-shadow: 0 4px 20px rgba(0, 102, 255, 0.08);
+}
+
+[data-theme="light"] .project-card::before {
+    background: linear-gradient(90deg, transparent, rgba(0, 102, 255, 0.15), transparent);
+}
+
+[data-theme="light"] .project-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(0, 102, 255, 0.25);
+    border-color: rgba(0, 102, 255, 0.4);
+}
+
+[data-theme="light"] .project-card:hover .project-header h3 {
+    text-shadow: 0 0 15px rgba(0, 102, 255, 0.6);
+    color: var(--accent-cyan);
+}
+
+/* Light mode buttons with enhanced effects */
+[data-theme="light"] .btn.primary {
+    background: linear-gradient(45deg, #0066ff, #8b5cf6);
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 102, 255, 0.3);
+}
+
+[data-theme="light"] .btn.secondary {
+    border: 2px solid #0066ff;
+    color: #0066ff;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+[data-theme="light"] .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(0, 102, 255, 0.4);
+}
+
+/* Light mode form elements */
+[data-theme="light"] .contact-form {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(0, 102, 255, 0.2);
+    box-shadow: 0 8px 30px rgba(0, 102, 255, 0.1);
+}
+
+[data-theme="light"] .form-group input,
+[data-theme="light"] .form-group textarea {
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 102, 255, 0.2);
+    color: var(--text-primary);
+}
+
+[data-theme="light"] .form-group input:focus,
+[data-theme="light"] .form-group textarea:focus {
+    border-color: var(--accent-cyan);
+    box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.15);
+}
+
+/* Light mode stat cards */
+[data-theme="light"] .stat-card {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(0, 102, 255, 0.15);
+    box-shadow: 0 4px 20px rgba(0, 102, 255, 0.08);
+}
+
+[data-theme="light"] .stat-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 102, 255, 0.2);
+}
+
+/* Light mode contact methods */
+[data-theme="light"] .contact-method {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(0, 102, 255, 0.15);
+    box-shadow: 0 4px 15px rgba(0, 102, 255, 0.08);
+}
+
+[data-theme="light"] .contact-method:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 102, 255, 0.15);
+}
+
+/* Light mode skill tags */
+[data-theme="light"] .skill-tag {
+    background: rgba(0, 102, 255, 0.1);
+    color: var(--accent-cyan);
+    border: 1px solid rgba(0, 102, 255, 0.2);
+}
+
+[data-theme="light"] .skill-tag:hover {
+    background: rgba(0, 102, 255, 0.2);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 102, 255, 0.3);
+}
+
+/* Light mode tech tags */
+[data-theme="light"] .tech-tag.primary-lang {
+    background: rgba(0, 102, 255, 0.15);
+    color: var(--accent-cyan);
+    border: 1px solid rgba(0, 102, 255, 0.3);
+}
+
+[data-theme="light"] .tech-tag.topic {
+    background: rgba(139, 92, 246, 0.1);
+    color: var(--accent-magenta);
+    border: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+/* Light mode project links */
+[data-theme="light"] .project-links a {
+    color: var(--accent-cyan);
+    border: 1px solid var(--accent-cyan);
+}
+
+[data-theme="light"] .project-links a::before {
+    background: rgba(0, 102, 255, 0.1);
+}
+
+[data-theme="light"] .project-links a:hover {
+    background: rgba(0, 102, 255, 0.1);
+    box-shadow: 0 8px 20px rgba(0, 102, 255, 0.25);
+}
+
+/* Light mode theme toggle */
+[data-theme="light"] .theme-toggle {
+    border-color: var(--accent-cyan);
+    color: var(--accent-cyan);
+}
+
+[data-theme="light"] .theme-toggle:hover {
+    background: rgba(0, 102, 255, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 102, 255, 0.2);
+}
+
+/* Light mode notifications */
+[data-theme="light"] .notification.success {
+    background: linear-gradient(135deg, rgba(0, 102, 255, 0.15), rgba(16, 185, 129, 0.15));
+    border-color: rgba(0, 102, 255, 0.3);
+    color: var(--text-primary);
+}
+
+[data-theme="light"] .notification.error {
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.15), rgba(245, 101, 101, 0.15));
+    border-color: rgba(239, 68, 68, 0.3);
+    color: var(--text-primary);
+}
+
+/* Enhanced light mode highlight effect */
+[data-theme="light"] .highlight {
+    background: linear-gradient(45deg, #0066ff, #8b5cf6, #0066ff);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+[data-theme="light"] .highlight::after {
+    color: #0066ff;
+}
